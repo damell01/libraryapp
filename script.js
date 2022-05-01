@@ -14,7 +14,7 @@ class Book {
     constructor(title, author, pages, read) {
         this.title = form.title.value; 
         this.author = form.author.value; 
-        this.pages = form.pages.value + 'pg'; 
+        this.pages = form.pages.value + 'pages'; 
         this.read = form.read.checked; 
     }
 }
@@ -39,7 +39,7 @@ function render() {
     const display = document.getElementById('Library-container');
     const books = document.querySelectorAll('.book');
     books.forEach(book => display.removeChild(book));
-   
+   // inifite loop for adding/deleting books
     for (let i=0; i<myLibrary.length; i++){
         createBook(myLibrary[i]);
     }
